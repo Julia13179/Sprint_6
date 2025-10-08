@@ -52,3 +52,11 @@ class HomePageSamokat(BasePage):
     def click_logo_open_home_page(self):
         self.find_element_with_wait(L.LOGO_SAMOKAT)
         self.click_on_element(L.LOGO_SAMOKAT)
+
+    @allure.step('Проверить URL Дзен')
+    def check_dzen_url(self):
+        return self.check_url(DZEN_URL)
+
+    @allure.step('Проверить URL главной страницы')
+    def check_home_url(self, base_url):
+        return self.check_url(base_url)
