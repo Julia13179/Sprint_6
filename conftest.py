@@ -20,7 +20,6 @@ def driver():
     service = Service()
     drv = webdriver.Firefox(service=service, options=opt)
     drv.set_window_size(1280, 1024)
-    drv.implicitly_wait(5)
     drv.get(BASE_URL)
     yield drv
     drv.quit()
